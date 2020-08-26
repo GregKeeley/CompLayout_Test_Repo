@@ -17,14 +17,16 @@ class LabelCell: UICollectionViewCell {
     //Programmatic UI Setup
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commonInit()
     }
     // Storyboard Setup
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        commonInit()
     }
     //helper initializer method
     private func commonInit() {
-        
+        textLabelConstraints()
     }
     private func textLabelConstraints() {
     addSubview(textLabel)
